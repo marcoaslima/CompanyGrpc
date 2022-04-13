@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package example;
+
+option csharp_namespace = "CompanyGrpc.Library.Services";
+
+service EmployeeService
+{
+    rpc getEmployee(EmployeeRequest) returns (EmployeeResponse);
+}
+
+message EmployeeResponse
+{
+    int64 id=1;
+    string username = 2;
+    string name = 3;
+    string designation = 4;
+}
+
+message EmployeeRequest
+{
+     int64 id=1;
+}
